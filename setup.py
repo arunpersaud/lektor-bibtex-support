@@ -1,21 +1,14 @@
 from setuptools import setup
 
-with io.open('README.md', 'rt', encoding="utf8") as f:
+with open('README.md', 'rt', encoding='utf8') as f:
     readme = f.read()
-
-_description_re = re.compile(r'description\s+=\s+(?P<description>.*)')
-
-with open('lektor_hello_world.py', 'rb') as f:
-    description = str(ast.literal_eval(_description_re.search(
-        f.read().decode('utf-8')).group(1)))
-
 
 setup(
     name='lektor-bibtex-support',
     version='0.1',
     author='Arun Persaud',
     author_email='arun@nubati.net',
-    description=description,
+    description = 'Bibtex file support to easily include publication lists.',
     long_description=readme,
     long_description_content_type='text/markdown',
     data_files=[('templates', ['templates/lektor_bibtex_support_default_template.html'])],
