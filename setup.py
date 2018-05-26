@@ -5,7 +5,7 @@ with open('README.md', 'rt', encoding='utf8') as f:
 
 setup(
     name='lektor-bibtex-support',
-    version='0.1',
+    version='0.1.1',
     author='Arun Persaud',
     author_email='arun@nubati.net',
     description = 'Bibtex file support to easily include publication lists.',
